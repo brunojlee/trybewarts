@@ -25,3 +25,8 @@ main,
 .login-section {
   align-self: center;
 }
+
+#evaluation-form {
+  width: 675px;
+  flex-direction: column;
+}
