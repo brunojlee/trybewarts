@@ -9,7 +9,8 @@
 .login-section,
 .trybewarts-login,
 main,
-#evaluation-form {
+#evaluation-form,
+.familia {
   display: flex;
 }
 
@@ -33,4 +34,8 @@ main,
 
 #trybewarts-forms-logo {
   height: 500px;
+}
+
+.familia {
+  flex-direction: column;
 }
