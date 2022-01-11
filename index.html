@@ -155,14 +155,16 @@
           <label for="label-infos" class="textarea" id="label-infos">
             <h3>Você concorda com o uso das informações acima?</h3>
           </label>
-          <input type="checkbox" id="agreement">
+          <input type="checkbox" id="agreement" onchange="displaySubmit()">
         </div>
       </form>
-    </div>
+      <button type="submit" id="submit-btn" disabled>Enviar</button>
+    </div>    
     <figure>
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg">
     </figure>
   </main>
+  <footer>Direitos reservados à Trybewarts©</footer>
   <script defer src="script.js"></script>
 </body>
 

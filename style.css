@@ -61,3 +61,7 @@ main,
   width: 675px;
   min-height: 200px;
 }
+
+#submit-btn {
+  display: none;
+}
