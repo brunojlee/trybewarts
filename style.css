@@ -4,25 +4,45 @@
   box-sizing: border-box;
 }
 
-.header, #trybewarts-header-title, .login-section, .trybewarts-login, main, #evaluation-form, .familia, .aprender, .select-container, .label-rate-container, .rate-radios, .agreement-container {
+main {
+  display: flex;
+}
+
+.select-container {
+  display: flex;
+}
+
+.label-rate-container {
+  display: flex;
+}
+
+.agreement-container {
   display: flex;
 }
 
 .header {
   background-color: rgb(50, 167, 145);
+  display: flex;
   justify-content: space-between;
 }
 
 #trybewarts-header-title {
+  display: flex;
   align-self: center;
 }
 
+.trybewarts-login {
+  display: flex;
+}
+
 .login-section {
+  display: flex;
   align-self: center;
 }
 
 #evaluation-form {
   width: 675px;
+  display: flex;
   flex-direction: column;
 }
 
@@ -31,17 +51,19 @@
 }
 
 .familia {
+  display: flex;
   flex-direction: column;
 }
 
 .aprender {
   width: 250px;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
 .rate-radios {
+  display: flex;
   margin-top: 3px;
   margin-left: 3px;
 }
