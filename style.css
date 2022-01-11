@@ -4,18 +4,7 @@
   box-sizing: border-box;
 }
 
-.header,
-#trybewarts-header-title,
-.login-section,
-.trybewarts-login,
-main,
-#evaluation-form,
-.familia,
-.aprender,
-.select-container,
-.label-rate-container,
-.rate-radios,
-.agreement-container {
+.header, #trybewarts-header-title, .login-section, .trybewarts-login, main, #evaluation-form, .familia, .aprender, .select-container, .label-rate-container, .rate-radios, .agreement-container {
   display: flex;
 }
 
@@ -64,4 +53,8 @@ main,
 
 #submit-btn {
   display: none;
+}
+
+#counter {
+  color: red;
 }
