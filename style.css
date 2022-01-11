@@ -12,7 +12,7 @@ main,
 #evaluation-form,
 .familia,
 .aprender,
-.select-container {
+.select-containe {
   display: flex;
 }
 
@@ -40,9 +40,6 @@ main,
 
 .familia {
   flex-direction: column;
-}
-
-.select-container {
 }
 
 .aprender {
