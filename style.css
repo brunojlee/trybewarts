@@ -10,7 +10,9 @@
 .trybewarts-login,
 main,
 #evaluation-form,
-.familia {
+.familia,
+.aprender,
+.select-container {
   display: flex;
 }
 
@@ -38,4 +40,14 @@ main,
 
 .familia {
   flex-direction: column;
+}
+
+.select-container {
+}
+
+.aprender {
+  width: 250px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

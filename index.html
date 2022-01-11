@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,33 @@
   <link rel="stylesheet" href="style.css">
   <title>Trybewarts</title>
 </head>
+
 <body>
   <header class="header">
     <figure>
       <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg">
     </figure>
-    <h1 id="trybewarts-header-title">Trybewarts</h1> 
+    <h1 id="trybewarts-header-title">Trybewarts</h1>
     <section class="login-section">
       <form class="trybewarts-login">
         <input class="input-login" name="email" placeholder="Email">
         <input class="input-senha" name="password" placeholder="Senha">
-        <button class="btn-entrar">Entrar</button> 
+        <button class="btn-entrar">Entrar</button>
       </form>
     </section>
   </header>
-  <main>    
+  <main>
     <div>
       <form id="evaluation-form">
         <h2>Formulário de Avaliação</h2>
         <div>
           <input id="input-name" placeholder="Nome">
           <input id="input-lastname" placeholder="Sobrenome">
-      </div>
+        </div>
         <div>
           <input id="input-email" placeholder="Email">
           <label for="house">
-            Casa: 
+            Casa:
             <select id="house">
               <option id="gitnoria-house" value="Gitnória">Gitnória</option>
               <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
@@ -40,26 +42,59 @@
               <option id="pytherina-house" value="Pytherina">Pytherina</option>
             </select>
           </label>
-      </div>
-      <div>
-        <h3 id="label-family">Qual sua família?</h3>
-        
-        <div class="familia">
-          <label>      
-            <input type="radio" name="family" value="Frontend">
-            Frontend
-          </label>
-          <label>
-            <input type="radio" name="family" value="Backend">
-            Backend
-          </label>
-          <label>
-            <input type="radio" name="family" value="FullStack">
-            Fullstack
-          </label>
         </div>
+        <hr>
+        <div class="select-container">
+          <div>
+            <h3 id="label-family">Qual sua família?</h3>
+            <div class="familia">
+              <label>
+                <input type="radio" name="family" value="Frontend">
+                Frontend
+              </label>
+              <label>
+                <input type="radio" name="family" value="Backend">
+                Backend
+              </label>
+              <label>
+                <input type="radio" name="family" value="FullStack">
+                Fullstack
+              </label>
+            </div>
+          </div>
 
-      </div>
+          <div>
+            <h3 id="label-content">Qual conteúdo você está com mais vontade de aprender?</h3>
+            <div class="aprender">
+              <label>
+                <input type="checkbox" value="HoFs">
+                HoFs
+              </label>
+              <label>
+                <input type="checkbox" value="Jest">
+                Jest
+              </label>
+              <label>
+                <input type="checkbox" value="Promises">
+                Promises
+              </label>
+              <label>
+                <input type="checkbox" value="React">
+                React
+              </label>
+              <label>
+                <input type="checkbox" value="SQL">
+                SQL
+              </label>
+              <label>
+                <input type="checkbox" value="Python">
+                Python
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr>
+
       </form>
     </div>
     <figure>
@@ -68,4 +103,5 @@
   </main>
   <script defer src="script.js"></script>
 </body>
+
 </html>
