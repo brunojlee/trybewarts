@@ -14,7 +14,8 @@ main,
 .aprender,
 .select-container,
 .label-rate-container,
- .rate-radios {
+.rate-radios,
+.agreement-container {
   display: flex;
 }
 
@@ -54,4 +55,9 @@ main,
 .rate-radios {
   margin-top: 3px;
   margin-left: 3px;
+}
+
+#textarea {
+  width: 675px;
+  min-height: 200px;
 }
