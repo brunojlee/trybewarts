@@ -4,6 +4,11 @@
   justify-content: space-between;
 }
 
+#trybewarts-header-title {
+  align-self: center;
+}
+
 .login-section {
   display: flex;
+  align-self: center;
 }
