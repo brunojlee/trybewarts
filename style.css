@@ -4,9 +4,17 @@
   box-sizing: border-box;
 }
 
+.header,
+#trybewarts-header-title,
+.login-section,
+.trybewarts-login,
+main,
+#evaluation-form {
+  display: flex;
+}
+
 .header {
   background-color: rgb(50, 167, 145);
-  display: flex;
   justify-content: space-between;
 }
 
@@ -15,10 +23,5 @@
 }
 
 .login-section {
-  display: flex;
   align-self: center;
-}
-
-.trybewarts-login {
-  display: flex;
 }
