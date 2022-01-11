@@ -12,7 +12,9 @@ main,
 #evaluation-form,
 .familia,
 .aprender,
-.select-containe {
+.select-container,
+.label-rate-container,
+ .rate-radios {
   display: flex;
 }
 
@@ -47,4 +49,9 @@ main,
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.rate-radios {
+  margin-top: 3px;
+  margin-left: 3px;
 }
