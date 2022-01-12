@@ -5,7 +5,7 @@ const submitButton = document.querySelector('#submit-btn');
 const textarea = document.getElementById('textarea');
 const contadorPalavras = document.getElementById('counter');
 const agreement = document.getElementById('agreement');
-const campoForms = document.getElementById('evaluation-form');
+/* const campoForms = document.getElementById('evaluation-form'); */
 
 function verificarLogin(e) {
   e.preventDefault();
