@@ -5,7 +5,19 @@ const submitButton = document.querySelector('#submit-btn');
 const textarea = document.getElementById('textarea');
 const contadorPalavras = document.getElementById('counter');
 const agreement = document.getElementById('agreement');
-/* const campoForms = document.getElementById('evaluation-form'); */
+const campoForms = document.getElementById('evaluation-form');
+const casa = document.querySelector('#house');
+const elementoFamilia = document.getElementsByName('family');
+const elementoAvaliacao = document.getElementsByName('rate');
+const elementoMateria = document.getElementsByClassName('subject');
+let familiaEscolhida = '';
+const materiasMarcadas = [];
+let nome = '';
+let sobrenome = '';
+let email = '';
+let casaEscolhida = '';
+let avaliacao = 0;
+let observacoes = '';
 
 function verificarLogin(e) {
   e.preventDefault();
@@ -30,83 +42,54 @@ function contador() {
   const counter = 500;
   contadorPalavras.innerHTML = counter - textarea.value.length;
 }
-/*
-function popularForm(
-  nome,
-  sobrenome,
-  email,
-  casaEscolhida,
-  materiasMarcadas,
-  observacoes,
-  familiaEscolhida,
-  avaliacao
-) {
-  '<div>Nome: ' + nome + ' ' + sobrenome + '</div>';
-  campoForms.insertAdjacentHTML('beforeend', '<div>Email: ' + email + '</div>');
-  campoForms.insertAdjacentHTML(
-    'beforeend',
-    '<div>Casa: ' + casaEscolhida + '</div>'
-  );
-  campoForms.insertAdjacentHTML(
-    'beforeend',
-    '<div>Família: ' + familiaEscolhida + '</div>'
-  );
-  campoForms.insertAdjacentHTML(
-    'beforeend',
-    '<div>Matérias:' + materiasMarcadas + '</div>'
-  );
-  campoForms.insertAdjacentHTML(
-    'beforeend',
-    '<div>Avaliação: ' + avaliacao + '</div>'
-  );
-  campoForms.insertAdjacentHTML(
-    'beforeend',
-    '<div>Observações: ' + observacoes + '</div>'
-  );
-}
-*/
-/*
-function enviarForm() {
-  const nome = document.querySelector('#input-name').value;
-  const sobrenome = document.querySelector('#input-lastname').value;
-  const email = document.querySelector('#input-email').value;
-  const casaEscolhida = document.querySelector('#house').value;
-  let familiaEscolhida = '';
 
-  if (document.querySelector('#radioFront').checked === true) {
-    familiaEscolhida = 'Frontend';
-  } else if (document.querySelector('#radioBack').checked === true) {
-    familiaEscolhida = 'Backend';
-  } else {
-    familiaEscolhida = 'Fullstack';
-  }
-
-  const materiasMarcadas = pegarMaterias();
-
-  let avaliacao = 0;
-
-  for (let i = 0; i < 10; i += 1) {
-    if (document.getElementsByName('rate')[i].checked) {
-      avaliacao = i + 1;
-    }
-  }
-
-  const observacoes = document.querySelector('#textarea').value;
-
-  campoForms.innerHTML = popularForm(
-    nome,
-    sobrenome,
-    email,
-    casaEscolhida,
-    materiasMarcadas,
-    observacoes,
-    familiaEscolhida,
-    avaliacao
-  );
-}
-*/
 entrar.addEventListener('click', verificarLogin);
 
 agreement.addEventListener('change', displaySubmit);
 
 textarea.addEventListener('keyup', contador);
+
+function printForm() {
+  campoForms.innerHTML = `<div>Nome: ${nome} ${sobrenome}</div>`;
+  campoForms.insertAdjacentHTML('beforeend', `<div>Email: ${email}</div>`);
+  campoForms.insertAdjacentHTML('beforeend', `<div>Casa: ${casaEscolhida}</div>`);
+  campoForms.insertAdjacentHTML('beforeend', `<div>Família: ${familiaEscolhida}</div>`);
+  campoForms.insertAdjacentHTML('beforeend', `<div>Matérias: ${materiasMarcadas}</div>`);
+  campoForms.insertAdjacentHTML('beforeend', `<div>Avaliação: ${avaliacao}</div>`);
+  campoForms.insertAdjacentHTML('beforeend', `<div>Observações: ${observacoes}</div>`);
+}
+
+function enviarForm2() {
+  for (let i = 0; i < 10; i += 1) {
+    if (elementoAvaliacao[i].checked === true) {
+      avaliacao = i + 1;
+    }
+  }
+}
+
+function enviarForm3() {
+  for (let i = 0; i < 3; i += 1) {
+    if (elementoFamilia[i].checked === true) {
+      familiaEscolhida = elementoFamilia[i].value;
+    }
+  }
+}
+
+function enviarForm() {
+  nome = document.querySelector('#input-name').value;
+  sobrenome = document.querySelector('#input-lastname').value;
+  email = document.querySelector('#input-email').value;
+  casaEscolhida = casa.value;
+
+  for (let i = 0; i < 6; i += 1) {
+    if (elementoMateria[i].checked === true) {
+      materiasMarcadas.push(elementoMateria[i].id);
+    }
+  }
+  observacoes = document.querySelector('#textarea').value;
+  enviarForm2();
+  enviarForm3();
+  printForm();
+}
+
+submitButton.addEventListener('click', enviarForm);
