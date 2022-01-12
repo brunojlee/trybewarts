@@ -49,15 +49,15 @@
             <h3 id="label-family">Qual sua família?</h3>
             <div class="familia">
               <label>
-                <input type="radio" name="family" value="Frontend">
+                <input type="radio" name="family" value="Frontend" id='radioFront'>
                 Frontend
               </label>
               <label>
-                <input type="radio" name="family" value="Backend">
+                <input type="radio" name="family" value="Backend" id='radioBack'>
                 Backend
               </label>
               <label>
-                <input type="radio" name="family" value="FullStack">
+                <input type="radio" name="family" value="FullStack" id='radioFront'>
                 Fullstack
               </label>
             </div>
@@ -68,29 +68,29 @@
             <div class="aprender">
               <div>
               <label>
-                <input type="checkbox" value="HoFs">
+                <input type="checkbox" class="subject" value="HoFs" id="HoFs">
                 HoFs
               </label>
               <label>
-                <input type="checkbox" value="Jest">
+                <input type="checkbox" class="subject" value="Jest" id="Jest">
                 Jest
               </label>
               <label>
-                <input type="checkbox" value="Promises">
+                <input type="checkbox" class="subject" value="Promises" id="Promises">
                 Promises
               </label>
             </div>
             <div>
               <label>
-                <input type="checkbox" value="React">
+                <input type="checkbox" class="subject" value="React" id="React">
                 React
               </label>
               <label>
-                <input type="checkbox" value="SQL">
+                <input type="checkbox" class="subject" value="SQL" id="SQL">
                 SQL
               </label>
               <label>
-                <input type="checkbox" value="Python">
+                <input type="checkbox" class="subject" value="Python" id="Python">
                 Python
               </label>
             </div>
@@ -159,7 +159,7 @@
           <input type="checkbox" id="agreement">
         </div>
       </form>
-      <button type="submit" id="submit-btn" disabled>Enviar</button>
+      <button type="submit" id="submit-btn" onclick="enviarForm()" disabled>Enviar</button>
     </div>    
     <figure>
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg">
