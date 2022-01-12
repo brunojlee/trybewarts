@@ -149,17 +149,6 @@ hr {
 
 #submit-btn {
   display: none;
-}
-
-#counter {
-  position: absolute;
-  top: 660px;
-  left: 650px;
-  color: rgb(32, 32, 32);
-  font-weight: 700;
-}
-
-#submit-btn {
   border: none;
   width: 150px;
   height: 30px;
@@ -169,6 +158,14 @@ hr {
   font-size: 17px;
   font-weight: 700;
   margin-left: 20px;
+}
+
+#counter {
+  position: absolute;
+  top: 660px;
+  left: 650px;
+  color: rgb(32, 32, 32);
+  font-weight: 700;
 }
 
 footer {

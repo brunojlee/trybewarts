@@ -30,20 +30,48 @@ function contador() {
   const counter = 500;
   contadorPalavras.innerHTML = counter - textarea.value.length;
 }
-
-entrar.addEventListener('click', verificarLogin);
-
-agreement.addEventListener('change', displaySubmit);
-
-textarea.addEventListener('keyup', contador);
-
-
+/*
+function popularForm(
+  nome,
+  sobrenome,
+  email,
+  casaEscolhida,
+  materiasMarcadas,
+  observacoes,
+  familiaEscolhida,
+  avaliacao
+) {
+  '<div>Nome: ' + nome + ' ' + sobrenome + '</div>';
+  campoForms.insertAdjacentHTML('beforeend', '<div>Email: ' + email + '</div>');
+  campoForms.insertAdjacentHTML(
+    'beforeend',
+    '<div>Casa: ' + casaEscolhida + '</div>'
+  );
+  campoForms.insertAdjacentHTML(
+    'beforeend',
+    '<div>Família: ' + familiaEscolhida + '</div>'
+  );
+  campoForms.insertAdjacentHTML(
+    'beforeend',
+    '<div>Matérias:' + materiasMarcadas + '</div>'
+  );
+  campoForms.insertAdjacentHTML(
+    'beforeend',
+    '<div>Avaliação: ' + avaliacao + '</div>'
+  );
+  campoForms.insertAdjacentHTML(
+    'beforeend',
+    '<div>Observações: ' + observacoes + '</div>'
+  );
+}
+*/
+/*
 function enviarForm() {
-  let nome = document.querySelector('#input-name').value;
-  let sobrenome = document.querySelector('#input-lastname').value;
-  let email = document.querySelector('#input-email').value;
-  let casaEscolhida = document.querySelector('#house').value;
-  let familiaEscolhida = "";
+  const nome = document.querySelector('#input-name').value;
+  const sobrenome = document.querySelector('#input-lastname').value;
+  const email = document.querySelector('#input-email').value;
+  const casaEscolhida = document.querySelector('#house').value;
+  let familiaEscolhida = '';
 
   if (document.querySelector('#radioFront').checked === true) {
     familiaEscolhida = 'Frontend';
@@ -52,44 +80,33 @@ function enviarForm() {
   } else {
     familiaEscolhida = 'Fullstack';
   }
-  
-  let materiasMarcadas = [];
- 
 
-  if (document.querySelector('#HoFs').checked === true) {
-    materiasMarcadas.push(' HoFs');
-  }
-
-  if (document.querySelector('#Jest').checked === true) {
-    materiasMarcadas.push(' Jest');
-  }
-
-  if (document.querySelector('#Promises').checked === true) {
-    materiasMarcadas.push(' Promises');
-  }
-
-  if (document.querySelector('#React').checked === true) {
-    materiasMarcadas.push(' React');
-  }
-
-  if (document.querySelector('#SQL').checked === true) {
-    materiasMarcadas.push(' SQL');
-  }
-  
-  if (document.querySelector('#Python').checked === true) {
-    materiasMarcadas.push(' Python');
-  }
+  const materiasMarcadas = pegarMaterias();
 
   let avaliacao = 0;
 
-  for (let i = 0; i < 10 ; i += 1) {
-    if (document.getElementsByName('rate')[i].checked == true) {
+  for (let i = 0; i < 10; i += 1) {
+    if (document.getElementsByName('rate')[i].checked) {
       avaliacao = i + 1;
     }
-  }  
+  }
 
-  let observacoes = document.querySelector('#textarea').value;
-    
-  campoForms.innerHTML = "<div>Nome: " + nome + " " + sobrenome + "<br>" + "Email: " + email + "<br>" + "Casa: " + casaEscolhida + "<br>" + "Família: " + familiaEscolhida + "<br>" + "Matérias:" + materiasMarcadas + "<br>" + "Avaliação: " + avaliacao + "<br>" + "Observações: " + observacoes + "</div>";
+  const observacoes = document.querySelector('#textarea').value;
 
+  campoForms.innerHTML = popularForm(
+    nome,
+    sobrenome,
+    email,
+    casaEscolhida,
+    materiasMarcadas,
+    observacoes,
+    familiaEscolhida,
+    avaliacao
+  );
 }
+*/
+entrar.addEventListener('click', verificarLogin);
+
+agreement.addEventListener('change', displaySubmit);
+
+textarea.addEventListener('keyup', contador);
