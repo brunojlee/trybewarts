@@ -50,6 +50,7 @@ agreement.addEventListener('change', displaySubmit);
 textarea.addEventListener('keyup', contador);
 
 function printForm() {
+  document.getElementById("evaluation-form").className += "fullfilled"
   campoForms.innerHTML = `<div>Nome: ${nome} ${sobrenome}</div>`;
   campoForms.insertAdjacentHTML('beforeend', `<div>Email: ${email}</div>`);
   campoForms.insertAdjacentHTML('beforeend', `<div>Casa: ${casaEscolhida}</div>`);
@@ -57,6 +58,8 @@ function printForm() {
   campoForms.insertAdjacentHTML('beforeend', `<div>Matérias: ${materiasMarcadas}</div>`);
   campoForms.insertAdjacentHTML('beforeend', `<div>Avaliação: ${avaliacao}</div>`);
   campoForms.insertAdjacentHTML('beforeend', `<div>Observações: ${observacoes}</div>`);
+  submitButton.disabled = true;
+  submitButton.style.display = 'none';
 }
 
 function enviarForm2() {

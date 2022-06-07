@@ -10,7 +10,8 @@
 </head>
 
 <body>
-  <header class="header">
+  <header>
+    <div class="header">
     <figure>
       <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg">
     </figure>
@@ -22,6 +23,7 @@
         <button class="btn-entrar">Entrar</button>
       </form>
     </section>
+  </div>
   </header>
   <main>
     <div>
@@ -150,7 +152,10 @@
             <h3>Deixe seu comentário:</h3>
           </label>
           <textarea id="textarea" maxlength="500"></textarea>
-          <span id="counter">500</span>
+          <div id="counterContainer">
+            Caracteres restantes: 
+            <span id="counter">500</span>
+          </div>
         </div>
         <div class="agreement-container">
           <label for="label-infos" class="textarea" id="label-infos">
